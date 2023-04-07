@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/title.png"
+      type="image/x-icon"
+    />
+    <title>Todo list | Structure</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="container">
+        <div class="row">
+          <p class="row-par par-title">Today's To Do</p>
+          <button class="row-button button-reload">
+            <span class="material-icons">&#xe627;</span>
+          </button>
+        </div>
+        <div class="row">
+          <p class="row-par row-input">
+            <input
+              type="text"
+              placeholder="Add to your list..."
+              id="todoInput"
+              autofocus=""
+            />
+          </p>
+          <button class="row-button">
+            <span class="checkbox-icon">&#8629;</span>
+          </button>
+        </div>
+        <div class="row show-checked">
+          <!-- <i class="checkbox-icon btn-icon-right">&#10004;</i> -->
+
+          <button class="row-button button-checked btn-checkbox">
+            &#10004;
+          </button>
+          <button class="row-button button-unchecked btn-checkbox">
+            &#9744;
+          </button>
+          <p class="row-par par-todo" contenteditable="true">
+            Double tap to edit
+          </p>
+          <button class="row-button button-trash">
+            <span class="material-icons">&#xe872;</span>
+          </button>
+          <button class="row-button button-drag">
+            <span class="material-icons">&#8942;</span>
+          </button>
+        </div>
+        <div class="row show-unchecked">
+          <button class="row-button button-checked btn-checkbox">
+            &#10004;
+          </button>
+          <button class="row-button button-unchecked btn-checkbox">
+            &#9744;
+          </button>
+          <p class="row-par par-todo" contenteditable="true">
+            Drag and drop to reorder your list
+          </p>
+          <button class="row-button button-trash">
+            <span class="material-icons">&#xe872;</span>
+          </button>
+          <button class="row-button button-drag">
+            <span class="material-icons">&#8942;</span>
+          </button>
+        </div>
+        <div class="row show-checked">
+          <button class="row-button button-checked btn-checkbox">
+            &#10004;
+          </button>
+          <button class="row-button button-unchecked btn-checkbox">
+            &#9744;
+          </button>
+          <p class="row-par par-todo" contenteditable="true">
+            Manage all your lists in one place.
+          </p>
+          <button class="row-button button-trash">
+            <span class="material-icons">&#xe872;</span>
+          </button>
+          <button class="row-button button-drag">
+            <span class="material-icons">&#8942;</span>
+          </button>
+        </div>
+        <div class="row show-unchecked">
+          <button class="row-button button-checked btn-checkbox">
+            &#10004;
+          </button>
+          <button class="row-button button-unchecked btn-checkbox">
+            &#9744;
+          </button>
+          <p class="row-par par-todo" contenteditable="true">
+            Resync to clear out the old.
+          </p>
+          <button class="row-button button-trash" onclick="alert('here')">
+            <span class="material-icons">&#xe872;</span>
+          </button>
+          <button class="row-button button-drag">
+            <span class="material-icons">&#8942;</span>
+          </button>
+        </div>
+        <button class="clear-completed">Clear all completed</button>
+      </section>
+    </main>
+  </body>
+</html>
