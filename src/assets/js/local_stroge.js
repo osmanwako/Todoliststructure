@@ -19,7 +19,7 @@ const lists = [
   {
     order: 2,
     task: 'Drag and drop to reorder your list',
-    status: 1,
+    status: 0,
   },
   {
     order: 3,
@@ -29,7 +29,7 @@ const lists = [
   {
     order: 4,
     task: 'Resync to clear out the old',
-    status: 1,
+    status: 0,
   },
 ];
 
@@ -37,7 +37,6 @@ const createlist = () => {
   lists.forEach((list) => {
     const p = ptodo();
     p.textContent = list.task;
-    p.setAttribute('contenteditable', true);
     if (list.status) {
       const div = divchecked();
       div.append(btnchecked(), btnunchecked(), p, btntrash(), btndarg());

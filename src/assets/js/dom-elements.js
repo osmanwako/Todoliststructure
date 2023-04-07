@@ -1,5 +1,3 @@
-import showcheckbox from './event-listener.js';
-
 export const btnclear = document.getElementById('cleartodolist');
 export const stack = document.getElementById('todolistid');
 
@@ -19,7 +17,6 @@ export const btnchecked = () => {
   const btn = document.createElement('button');
   btn.className = 'row-button button-checked btn-checkbox';
   btn.innerHTML = '&#10004;';
-  btn.addEventListener('click', showcheckbox);
   return btn;
 };
 
@@ -27,7 +24,6 @@ export const btnunchecked = () => {
   const btn = document.createElement('button');
   btn.className = 'row-button button-unchecked btn-checkbox';
   btn.innerHTML = '&#9744;';
-  btn.addEventListener('click', showcheckbox);
   return btn;
 };
 
