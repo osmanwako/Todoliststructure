@@ -1,7 +1,7 @@
-import style from './assets/css/style.css';
-import { getcheckbox } from './assets/js/event-listener.js';
+import './assets/css/style.css';
+import createlist from './assets/js/local_stroge.js';
 
 const start = () => {
-  getcheckbox();
+  createlist();
 };
 start();

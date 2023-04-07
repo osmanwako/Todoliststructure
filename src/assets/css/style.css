@@ -33,24 +33,12 @@ body {
   align-items: center;
   width: 100%;
   border-bottom: #ebebeb 2px solid;
-  padding: 5px 10px 0px 12px;
+  padding: 5px 10px 0 12px;
 }
 
 .row:has(p:focus) {
   background-color: rgba(255, 255, 0, 0.321);
   color: #545862;
-}
-
-.row:has(p:focus) > .button-drag {
-  display: none;
-}
-
-.row:has(p:focus) > .button-trash {
-  display: block;
-}
-
-.show-checked > .button-unchecked {
-  display: none;
 }
 
 .show-checked > p {
@@ -59,16 +47,8 @@ body {
   font-size: 16px;
   color: #bababa;
 }
-.show-unchecked > .button-checked {
-  display: none;
-}
-
-.row > .button-trash {
-  display: none;
-}
 
 .row-par {
-  flex-basis: 1;
   flex-grow: 1;
   padding: 10px;
   font-size: 16px;
@@ -92,7 +72,6 @@ body {
 
 .row-button {
   display: block;
-  flex-basis: 1;
   flex-grow: 0;
   padding: 8px;
   background-color: transparent;
@@ -117,14 +96,34 @@ body {
   font-style: italic;
 }
 
+.show-unchecked > .button-checked {
+  display: none;
+}
+
+.show-checked > .button-unchecked {
+  display: none;
+}
+
 .button-drag:hover {
   color: #545862;
   cursor: move;
 }
 
+.row:has(p:focus) > .button-drag {
+  display: none;
+}
+
+.row > .button-trash {
+  display: none;
+}
+
 .button-trash:hover {
   color: #545862;
   cursor: pointer;
+}
+
+.row:has(p:focus) > .button-trash {
+  display: block;
 }
 
 input[type='text'] {
