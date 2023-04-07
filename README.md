@@ -107,7 +107,7 @@ In order to run this project you need:
 
 ### Setup
 
-Clone this repository to your desired folder:
+Clone this repository to your dist folder:
 
 git clone git clone https://github.com/osmanwako/Todoliststructure.git
 
