@@ -33,7 +33,10 @@ const lists = [
   },
 ];
 
+const istoredlist = () => localStorage.getItem('storedtodo');
+
 const createlist = () => {
+  const lists = JSON.parse(istoredlist());
   lists.forEach((list) => {
     const p = ptodo();
     p.textContent = list.task;
@@ -48,4 +51,14 @@ const createlist = () => {
     }
   });
 };
-export default createlist;
+
+const getlists = () => {
+  if (istoredlist()) {
+    createlist();
+  } else {
+    localStorage.setItem('storedtodo', JSON.stringify(lists));
+    createlist();
+  }
+};
+
+export default getlists;

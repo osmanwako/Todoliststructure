@@ -1,7 +1,7 @@
 import './assets/css/style.css';
-import createlist from './assets/js/local_stroge.js';
+import getlists from './assets/js/local_stroge.js';
 
 const start = () => {
-  createlist();
+  getlists();
 };
 start();
