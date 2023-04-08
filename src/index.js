@@ -1,7 +1,8 @@
 import './assets/css/style.css';
-import createlist from './assets/js/local_stroge.js';
+import { getlists, listeninput } from './assets/js/storedata.js';
 
 const start = () => {
-  createlist();
+  listeninput();
+  getlists();
 };
 start();

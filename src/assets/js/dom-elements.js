@@ -1,5 +1,7 @@
 export const btnclear = document.getElementById('cleartodolist');
 export const stack = document.getElementById('todolistid');
+export const input = document.getElementById('todo-input');
+export const entericon = document.getElementById('enterkey-icon');
 
 export const divunchecked = () => {
   const div = document.createElement('div');
@@ -30,20 +32,22 @@ export const btnunchecked = () => {
 export const ptodo = () => {
   const par = document.createElement('p');
   par.className = 'row-par par-todo';
-  par.contenteditable = 'true';
+  par.setAttribute('contenteditable', 'true');
   return par;
 };
 
 export const btntrash = () => {
   const btn = document.createElement('button');
-  btn.className = 'row-button button-trash';
-  btn.innerHTML = '<span class="material-icons">&#xe872;</span>';
+  btn.className = 'row-button button-trash material-icons';
+  btn.innerHTML = '&#xe872;';
+  btn.name = 'buttontrash';
   return btn;
 };
 
 export const btndarg = () => {
   const btn = document.createElement('button');
-  btn.className = 'row-button button-drag';
-  btn.innerHTML = '<span class="material-icons">&#8942;</span>';
+  btn.className = 'row-button button-drag material-icons';
+  btn.innerHTML = '&#8942;';
+  btn.name = 'buttondrag';
   return btn;
 };
