@@ -14,22 +14,22 @@ import {
 
 const istoredlist = () => localStorage.getItem('storedtodo');
 const storelists = (lists) => {
-  lists = lists.map((list, i) => ({ ...list, order: i }));
+  lists = lists.map((list, i) => ({ ...list, index: i }));
   localStorage.setItem('storedtodo', JSON.stringify(lists));
 };
 
 const addtostorage = (value) => {
   const id = `tdl${Date.now()}`;
   const list = {
-    order: 0,
-    task: value,
-    status: 0,
+    index: 0,
+    desc: value,
+    completed: false,
     id,
   };
   let lists = [];
   if (istoredlist()) {
     lists = JSON.parse(istoredlist());
-    list.order = lists.length;
+    list.index = lists.length;
   }
   lists = [...lists, list];
   storelists(lists);
@@ -59,7 +59,7 @@ const updatelist = (id, value) => {
     const lists = JSON.parse(istoredlist());
     lists.map((list) => {
       if (list.id === id) {
-        list.task = value;
+        list.desc = value;
       }
       return list;
     });
@@ -123,10 +123,10 @@ const createlist = () => {
     const p = ptodo();
     p.addEventListener('keydown', parkeyevent);
     p.addEventListener('blur', parblur);
-    p.textContent = list.task;
+    p.textContent = list.desc;
     const trash = btntrash();
     trash.addEventListener('mousedown', listenremove);
-    if (list.status) {
+    if (list.compeleted) {
       const div = divchecked();
       div.id = list.id;
       div.append(btnchecked(), btnunchecked(), p, trash, btndarg());
