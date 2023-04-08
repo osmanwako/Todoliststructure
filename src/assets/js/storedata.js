@@ -11,6 +11,7 @@ import {
   input,
   entericon,
 } from './dom-elements.js';
+import iscompleted from './update-status.js';
 
 const istoredlist = () => localStorage.getItem('storedtodo');
 const storelists = (lists) => {
@@ -93,7 +94,7 @@ const updatestatus = (id) => {
     let lists = JSON.parse(istoredlist());
     lists = lists.map((list) => {
       if (list.id === id) {
-        list.completed = !list.completed;
+        list.completed = iscompleted(list.completed);
       }
       return list;
     });
@@ -182,7 +183,7 @@ const clearcompleted = () => {
         const element = document.getElementById(list.id);
         element.remove();
       }
-      return !list.completed;
+      return iscompleted(list.completed);
     });
     storelists(lists);
   }
