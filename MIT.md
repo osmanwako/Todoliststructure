@@ -1,7 +1,7 @@
-## Copyright 2021, Osman Wako
+Copyright 2023, Osman Wako
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this TODOLISTSTRUCTURE and associated documentation files, to deal in the TODOLISTSTRUCTURE without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the TODOLISTSTRUCTURE, and to permit persons to whom the TODOLISTSTRUCTURE is furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this Task to Do List and associated documentation files, to deal in the Task to Do List without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Task to Do List, and to permit persons to whom the Task to Do List is furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the TODOLISTSTRUCTURE.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Task to Do List.
 
-THE TODOLISTSTRUCTURE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE TODOLISTSTRUCTURE OR THE USE OR OTHER DEALINGS IN THE TODOLISTSTRUCTURE.
+THE Task to Do List IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE Task to Do List OR THE USE OR OTHER DEALINGS IN THE Task to Do List.
