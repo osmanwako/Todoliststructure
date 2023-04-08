@@ -88,6 +88,25 @@ const parkeyevent = (event) => {
     removelist(id);
   }
 };
+const updatestatus = (id) => {
+  if (istoredlist()) {
+    let lists = JSON.parse(istoredlist());
+    lists = lists.map((list) => {
+      if (list.id === id) {
+        list.completed = !list.completed;
+      }
+      return list;
+    });
+    storelists(lists);
+  }
+};
+const showcheckbox = (event) => {
+  const parent = event.target.parentElement;
+  parent.classList.toggle('show-unchecked');
+  parent.classList.toggle('show-checked');
+  updatestatus(parent.id);
+};
+
 const addlist = () => {
   const value = input.value ?? '';
   if (value) {
@@ -97,10 +116,15 @@ const addlist = () => {
     p.addEventListener('blur', parkeyevent);
     const trash = btntrash();
     trash.addEventListener('click', listenremove);
+    const unchecked = btnunchecked();
+    const checked = btnchecked();
+    checked.addEventListener('click', showcheckbox);
+    unchecked.addEventListener('click', showcheckbox);
     const id = addtostorage(value);
     const div = divunchecked();
+    const drag = btndarg();
     div.id = id;
-    div.append(btnchecked(), btnunchecked(), p, trash, btndarg());
+    div.append(checked, unchecked, p, trash, drag);
     stack.insertBefore(div, btnclear);
   }
   input.value = '';
@@ -126,15 +150,20 @@ const createlist = () => {
     p.textContent = list.desc;
     const trash = btntrash();
     trash.addEventListener('mousedown', listenremove);
-    if (list.compeleted) {
+    const unchecked = btnunchecked();
+    const checked = btnchecked();
+    checked.addEventListener('click', showcheckbox);
+    unchecked.addEventListener('click', showcheckbox);
+    const drag = btndarg();
+    if (list.completed) {
       const div = divchecked();
       div.id = list.id;
-      div.append(btnchecked(), btnunchecked(), p, trash, btndarg());
+      div.append(checked, unchecked, p, trash, drag);
       stack.insertBefore(div, btnclear);
     } else {
       const div = divunchecked();
       div.id = list.id;
-      div.append(btnchecked(), btnunchecked(), p, trash, btndarg());
+      div.append(checked, unchecked, p, trash, drag);
       stack.insertBefore(div, btnclear);
     }
   });
@@ -145,8 +174,23 @@ export const listeninput = () => {
   entericon.addEventListener('click', getenterkey);
 };
 
+const clearcompleted = () => {
+  if (istoredlist()) {
+    let lists = JSON.parse(istoredlist());
+    lists = lists.filter((list) => {
+      if (list.completed) {
+        const element = document.getElementById(list.id);
+        element.remove();
+      }
+      return !list.completed;
+    });
+    storelists(lists);
+  }
+};
+
 export const getlists = () => {
   if (istoredlist()) {
     createlist();
   }
+  btnclear.addEventListener('click', clearcompleted);
 };
