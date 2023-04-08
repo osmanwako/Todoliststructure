@@ -19,6 +19,7 @@ export const btnchecked = () => {
   const btn = document.createElement('button');
   btn.className = 'row-button button-checked btn-checkbox';
   btn.innerHTML = '&#10004;';
+  btn.name = 'checked';
   return btn;
 };
 
@@ -26,6 +27,7 @@ export const btnunchecked = () => {
   const btn = document.createElement('button');
   btn.className = 'row-button button-unchecked btn-checkbox';
   btn.innerHTML = '&#9744;';
+  btn.name = 'unchecked';
   return btn;
 };
 
