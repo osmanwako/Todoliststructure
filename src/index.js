@@ -1,3 +1,4 @@
+import './assets/images/title.png';
 import './assets/css/style.css';
 import { getlists, listeninput } from './assets/js/storedata.js';
 
