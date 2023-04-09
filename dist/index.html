@@ -14,38 +14,30 @@
       type="image/x-icon"
     />
     <title>Todo list | Structure</title>
-  <script defer src="index.bundle.js"></script></head>
+  <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
   <body>
     <main class="main">
-      <section class="container">
+      <section class="container" id="todolistid">
         <div class="row">
-          <p class="row-par par-title">Demo</p>
+          <p class="row-par par-title">Today's To Do</p>
           <button class="row-button button-reload">
             <span class="material-icons">&#xe627;</span>
           </button>
         </div>
-        <div class="row demo-input">
-          <input
-            type="text"
-            placeholder="Add to your list..."
-            id="todoInput"
-            autofocus=""
-          />
-          <span class="icon">&#8629;</span>
-        </div>
         <div class="row">
-          <button class="row-button">&#9744;</button>
-          <p class="row-par">Your Items here</p>
-          <button class="row-button">
-            <span class="material-icons">&#xe872;</span>
+          <p class="row-par row-input">
+            <input
+              type="text"
+              placeholder="Add to your list..."
+              id="todo-input"
+              autofocus=""
+            />
+          </p>
+          <button class="row-button checkbox-icon" id="enterkey-icon">
+            &#8629;
           </button>
         </div>
-        <div class="row">
-          <span>&#10004;</span>
-          <p>Your Items here</p>
-          <span><i class="material-icons">&#8942;</i> </span>
-        </div>
-        <button class="clear-completed">Clear all completed</button>
+         <button class="clear-completed" id="cleartodolist">Clear all completed</button>
       </section>
     </main>
   </body>
