@@ -26,7 +26,7 @@ module.exports = {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
         loader: 'file-loader',
         options: {
-          name: 'assets/images/[name].[ext]',
+          name: 'resource/images/[name].[ext]',
         },
       },
       {
